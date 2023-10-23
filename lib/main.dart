@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/screens/home_screen.dart';
+import 'package:weather_app/screens/login_page.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MyApp(
+    initialRoute: LoginPage.route,
+    routes: {
+      LoginPage.route: (context) => const LoginPage(),
+      HomeScreen.route: (context) => const HomeScreen(),
+    },
+  ));
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key, required initialRoute, required routes});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      title: 'Wether App',
+      initialRoute: LoginPage.route,
+      routes: {
+        LoginPage.route: (context) => const LoginPage(),
+        HomeScreen.route: (context) => const HomeScreen(),
+      },
+      home: const LoginPage(),
     );
   }
 }
