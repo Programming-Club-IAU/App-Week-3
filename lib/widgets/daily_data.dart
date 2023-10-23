@@ -41,7 +41,7 @@ class DailyData extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Text(
-          "Week Forcast",
+          "Week Forecast",
           style: GoogleFonts.exo2(fontSize: 18),
         ),
         Container(
