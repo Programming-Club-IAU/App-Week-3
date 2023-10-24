@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weather_app/controller/global_controller.dart';
 import 'package:weather_app/widgets/current_weather.dart';
-import 'package:weather_app/widgets/daily_data.dart';
+import 'package:weather_app/widgets/daily_weather.dart';
 import 'package:weather_app/widgets/header.dart';
-import 'package:weather_app/widgets/hourly_data.dart';
+import 'package:weather_app/widgets/hourly_weather.dart';
 import 'package:weather_app/widgets/style.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -50,11 +50,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(
                         height: 20,
                       ),
-                      HeaderWidget(),
+                      Header(),
                       CurrentWeather(),
-                      SnowFlakes(),
-                      HourlyDataWidget(),
-                      DailyData(),
+                      Style(),
+                      HourlyData(),
+                      DailyWeather(),
                     ],
                   ))),
       ),

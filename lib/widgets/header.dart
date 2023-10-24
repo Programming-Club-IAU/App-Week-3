@@ -5,14 +5,14 @@ import 'package:intl/intl.dart';
 import 'package:weather_app/controller/global_controller.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HeaderWidget extends StatefulWidget {
-  const HeaderWidget({super.key});
+class Header extends StatefulWidget {
+  const Header({super.key});
 
   @override
-  State<HeaderWidget> createState() => _HeaderWidgetState();
+  State<Header> createState() => _HeadertState();
   Widget build(BuildContext context) {
-    return Container(
-      child: const DecoratedBox(
+    return const SizedBox(
+      child: DecoratedBox(
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/example/images/snow.png"))),
@@ -21,7 +21,7 @@ class HeaderWidget extends StatefulWidget {
   }
 }
 
-class _HeaderWidgetState extends State<HeaderWidget> {
+class _HeadertState extends State<Header> {
   String city = "";
   String date = DateFormat('EEE, MMM d').format(DateTime.now());
 

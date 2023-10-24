@@ -18,13 +18,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Wether App',
+      title: 'Weather App',
       initialRoute: LoginPage.route,
       routes: {
         LoginPage.route: (context) => const LoginPage(),
         HomeScreen.route: (context) => const HomeScreen(),
       },
       home: const LoginPage(),
+      theme: ThemeData(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

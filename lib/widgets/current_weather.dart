@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'containers.dart';
+import 'cards.dart';
 
 class CurrentWeather extends StatelessWidget {
   const CurrentWeather({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      currentTemperatureWidget(),
-      currentStateWidget(),
-      dailyWeather()
-    ]);
+    return Column(
+        children: [currentTemperature(), currentState(), dailyWeather()]);
   }
 
-  Widget currentTemperatureWidget() {
+  Widget currentTemperature() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -38,7 +35,7 @@ class CurrentWeather extends StatelessWidget {
     );
   }
 
-  Widget currentStateWidget() {
+  Widget currentState() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -59,28 +56,31 @@ class CurrentWeather extends StatelessWidget {
   }
 
   Widget dailyWeather() {
-    return Column(children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          ContainerBox2(
-              image:
-                  Image.asset("assets/example/images/icons8-wind-48 (1).png")),
-          ContainerBox2(
-              image: Image.asset("assets/example/images/icons8-clouds-64.png")),
-          ContainerBox2(
-              image: Image.asset(
-                  "assets/example/images/icons8-hygrometer-64.png")),
-        ],
-      ),
-      const Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          ContainerBox3(text: "3.06km/h"),
-          ContainerBox3(text: "82%"),
-          ContainerBox3(text: "35%")
-        ],
-      )
-    ]);
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            CurrentWeatherIconCard(
+                image: Image.asset(
+                    "assets/example/images/icons8-wind-48 (1).png")),
+            CurrentWeatherIconCard(
+                image:
+                    Image.asset("assets/example/images/icons8-clouds-64.png")),
+            CurrentWeatherIconCard(
+                image: Image.asset(
+                    "assets/example/images/icons8-hygrometer-64.png")),
+          ],
+        ),
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            CurrentWeathrtDataCard(text: "3.06km/h"),
+            CurrentWeathrtDataCard(text: "82%"),
+            CurrentWeathrtDataCard(text: "35%")
+          ],
+        ),
+      ],
+    );
   }
 }

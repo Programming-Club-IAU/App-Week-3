@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SnowFlakes extends StatelessWidget {
-  const SnowFlakes({super.key});
+class Style extends StatelessWidget {
+  const Style({super.key});
 
   @override
   Widget build(BuildContext context) {

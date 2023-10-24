@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:weather_app/widgets/containers.dart';
+import 'package:weather_app/widgets/cards.dart';
 
 /*
   Widget dailyWeather() {
@@ -23,8 +23,8 @@ import 'package:weather_app/widgets/containers.dart';
     );
   }
 }*/
-class DailyData extends StatelessWidget {
-  const DailyData({super.key});
+class DailyWeather extends StatelessWidget {
+  const DailyWeather({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -60,26 +60,26 @@ class DailyData extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          ContainerBox6(
+          DailyWeatherCard(
               day: "Sun",
               image: Image.asset("assets/example/images/icons8-cloud-50.png"),
               temp: "6°"),
-          ContainerBox6(
+          DailyWeatherCard(
               day: "Mon",
               image: Image.asset(
                   "assets/example/images/icons8-windy-weather-50.png"),
               temp: "3°"),
-          ContainerBox6(
+          DailyWeatherCard(
               day: "Tue",
               image: Image.asset(
                   "assets/example/images/icons8-windy-weather-50.png"),
               temp: "3°"),
-          ContainerBox6(
+          DailyWeatherCard(
               day: "Wed",
               image:
                   Image.asset("assets/example/images/icons8-sleet-50 (1).png"),
               temp: "-1°"),
-          ContainerBox6(
+          DailyWeatherCard(
               day: "Fri",
               image:
                   Image.asset("assets/example/images/icons8-snow-50 (1).png"),
