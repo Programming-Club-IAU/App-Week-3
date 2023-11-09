@@ -42,11 +42,10 @@ class HomePage extends StatelessWidget {
   Expanded _weatherDays() {
     return Expanded(
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween, // Add this line
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Column(
-            crossAxisAlignment:
-                CrossAxisAlignment.start, // Aligns the column to the start
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: List.generate(weatherPredList.length, (index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -62,8 +61,7 @@ class HomePage extends StatelessWidget {
             }),
           ),
           Column(
-            crossAxisAlignment:
-                CrossAxisAlignment.center, // Aligns the column to the center
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: List.generate(weatherPredList.length, (index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -75,8 +73,7 @@ class HomePage extends StatelessWidget {
             }),
           ),
           Column(
-            crossAxisAlignment:
-                CrossAxisAlignment.end, // Aligns the column to the end
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: List.generate(weatherPredList.length, (index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -265,7 +262,6 @@ class HomePage extends StatelessWidget {
     return AppBar(
       backgroundColor: const Color.fromARGB(255, 30, 30, 30),
       title: const Text('Weather App'),
-      // i want to remove the shadow and make it seemless with the background
       elevation: 0,
       actions: [
         IconButton(
