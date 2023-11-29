@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/example/MiCard/widgets/details_row.dart';
+import 'package:weather_app/models/example/MiCard/widgets/details_row.dart';
 
 class MiCardPageExample extends StatelessWidget {
   const MiCardPageExample({super.key});
