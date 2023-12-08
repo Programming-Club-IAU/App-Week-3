@@ -271,7 +271,7 @@ CircleAvatar(
   - `NetworkImage`
     - This is used for images that are stored on the internet
 
-#### [AssetImage](https://api.flutter.dev/flutter/painting/AssetImage-class.html)
+#### AssetImage
 
 ```dart
 Image(
@@ -283,7 +283,7 @@ Image(
 - The `Image` widget has an `image` property that takes an `ImageProvider` object. This is the image that will be displayed.
 - The `AssetImage` widget is a widget that displays an image that is stored locally in your app.
 
-#### [NetworkImage](https://api.flutter.dev/flutter/painting/NetworkImage-class.html)
+#### NetworkImage
 
 ```dart
 Image(
