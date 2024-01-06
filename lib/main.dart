@@ -1,5 +1,4 @@
 import 'screens/home_screen.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 
 void main() {
